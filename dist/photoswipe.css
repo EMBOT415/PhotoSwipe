@@ -1,3 +1,8 @@
+
+body {
+  background-color: linen;
+}
+
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*
 	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
@@ -5,11 +10,15 @@
 /* pswp = photoswipe */
 .pswp {
   display: none;
+  margin: 0 auto;
+  text-align: center;
   position: absolute;
+  max-width: 900px;
   width: 100%;
   height: 100%;
   left: 0;
-  top: 0;
+  right:0;
+  top: 100px;
   overflow: hidden;
   -ms-touch-action: none;
   touch-action: none;
@@ -64,12 +73,13 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #fff;
   opacity: 0;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   will-change: opacity; }
+
 
 .pswp__scroll-wrap {
   position: absolute;
