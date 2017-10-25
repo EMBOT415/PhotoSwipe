@@ -67,7 +67,9 @@
 
 .pswp__button,
 .pswp__button--arrow--left:before,
-.pswp__button--arrow--right:before {
+.pswp__button--arrow--right:before, 
+.pswp__button--arrow--up:before,
+.pswp__button--arrow--down:before {
 	background: url(#{$pswp__assets-path}default-skin.png) 0 0 no-repeat;
 	background-size: 264px 88px;
 	width: 44px;
@@ -79,12 +81,16 @@
 	/* Serve SVG sprite if browser supports SVG and resolution is more than 105dpi */
     .pswp--svg .pswp__button,
     .pswp--svg .pswp__button--arrow--left:before,
-	.pswp--svg .pswp__button--arrow--right:before {
+	.pswp--svg .pswp__button--arrow--right:before,
+	.pswp--svg .pswp__button--arrow--up:before,
+	.pswp--svg .pswp__button--arrow--down:before { {
         background-image: url(#{$pswp__assets-path}default-skin.svg);
     }
 
     .pswp--svg .pswp__button--arrow--left,
-	.pswp--svg .pswp__button--arrow--right {
+	.pswp--svg .pswp__button--arrow--right, 
+	.pswp--svg .pswp__button--arrow--up,
+	.pswp--svg .pswp__button--arrow--down {
 		background: none;
 	}
 }
@@ -125,7 +131,9 @@
 /* no arrows on touch screens */
 .pswp--touch {
 	.pswp__button--arrow--left,
-	.pswp__button--arrow--right {
+	.pswp__button--arrow--right,
+	.pswp__button--arrow--up,
+	.pswp__button--arrow--down {
 		visibility: hidden;		
 	}
 }
@@ -134,7 +142,7 @@
 	Arrow buttons hit area
 	(icon is added to :before pseudo-element)
 */
-.pswp__button--arrow--left,
+/*.pswp__button--arrow--left,
 .pswp__button--arrow--right {
 	background: none;
 	top: 50%;
@@ -171,6 +179,64 @@
 	right: 6px;
 	background-position: -94px -44px;
 }
+*/
+
+
+/*
+EMILY - making up / down arrows as VOGUE
+	Arrow buttons hit area
+	(icon is added to :before pseudo-element)
+*/
+
+.pswp__button--arrow--left{
+	background: none;
+/*	top: 50%;*/
+left:0;
+top:45%;
+/*	margin-top: -50px;*/
+	width: 70px;
+	height: 100px;
+	position: absolute;
+}
+
+.pswp__button--arrow--right {
+	background: none;
+/*	top: 50%;*/
+right:0;
+bottom:45%;
+/*	margin-top: -50px;
+*/	width: 70px;
+	height: 100px;
+	position: absolute;
+}
+.pswp__button--arrow--left {
+/*	left: 0;*/
+}
+
+.pswp__button--arrow--right {
+/*	right: 0;*/
+}
+
+.pswp__button--arrow--left:before,
+.pswp__button--arrow--right:before {
+	content: '';
+	top: 35px;
+	background-color: rgba(0,0,0,0.3);
+	height: 30px;
+	width: 32px;
+	position: absolute;
+}
+
+.pswp__button--arrow--left:before {
+	left: 6px;
+	background-position: -138px -44px;
+}
+
+.pswp__button--arrow--right:before {
+	right: 6px;
+	background-position: -94px -44px;
+}
+
 
 
 /*
@@ -500,7 +566,9 @@ a.pswp__share--download {
 .pswp__caption,
 .pswp__top-bar,
 .pswp--has_mouse .pswp__button--arrow--left,
-.pswp--has_mouse .pswp__button--arrow--right {
+.pswp--has_mouse .pswp__button--arrow--right,
+.pswp--has_mouse .pswp__button--arrow--up,
+.pswp--has_mouse .pswp__button--arrow--down {
 	-webkit-backface-visibility: hidden; 
 	will-change: opacity;
 	transition: opacity $pswp__controls-transition-duration cubic-bezier(.4,0,.22,1);
@@ -509,7 +577,9 @@ a.pswp__share--download {
 /* pswp--has_mouse class is added only when two subsequent mousemove events occur */
 .pswp--has_mouse {
 	.pswp__button--arrow--left,
-	.pswp__button--arrow--right {
+	.pswp__button--arrow--right, 
+	.pswp__button--arrow--up,
+	.pswp__button--arrow--down {
 		visibility: visible;
 	}
 }
@@ -531,12 +601,17 @@ a.pswp__share--download {
 	
 .pswp__ui--idle {
 	.pswp__top-bar { 
-		opacity: 0; 
+/*		opacity: 0; */
+/*emily*/
+opacity:1;
 	}
-
+/*EMILY*/
 	.pswp__button--arrow--left,
-	.pswp__button--arrow--right {
-		opacity: 0;
+	.pswp__button--arrow--right,
+	.pswp__button--arrow--up,
+	.pswp__button--arrow--down
+	 {
+		opacity: 1;
 	}
 }
 
@@ -548,9 +623,12 @@ a.pswp__share--download {
 	.pswp__top-bar,
 	.pswp__caption,
 	.pswp__button--arrow--left,
-	.pswp__button--arrow--right {
+	.pswp__button--arrow--right,
+	.pswp__button--arrow--up,
+	.pswp__button--arrow--down {
 		/* Force paint & create composition layer for controls. */
-		opacity: 0.001; 
+		/*opacity: 0.001; */
+		opacity: 1;
 	}
 }
 
@@ -558,6 +636,8 @@ a.pswp__share--download {
 .pswp__ui--one-slide {
 	.pswp__button--arrow--left,
 	.pswp__button--arrow--right,
+	.pswp__button--arrow--up,
+	.pswp__button--arrow--down,
 	.pswp__counter {
 		display: none;
 	}
