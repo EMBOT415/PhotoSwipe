@@ -48,9 +48,8 @@
 .pswp__ui--over-close .pswp__button--close {
   opacity: 1; }
 
-/*.pswp__button,
-.pswp__button--arrow--left:before,
-.pswp__button--arrow--right:before {
+
+.pswp__button {
   background: url(default-skin.png) 0 0 no-repeat;
   background-size: 264px 88px;
   width: 44px;
@@ -78,12 +77,31 @@ background: url(default-skin.svg) 0 0 no-repeat;
   width: 44px;
   height: 44px; }
 
+
+.pswp__button--arrow--left:before{
+  background: url(up.png) 50% 50% no-repeat;
+/*  background-size: 264px 88px;*/
+  width: 44px;
+  height: 44px; }
+
+
+.pswp__button--arrow--right:before {
+  background: url(down.png) 50% 50% no-repeat;
+/*  background-size: 264px 88px;*/
+  width: 44px;
+  height: 44px; }
+
 @media (-webkit-min-device-pixel-ratio: 1.1), (-webkit-min-device-pixel-ratio: 1.09375), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
   /* Serve SVG sprite if browser supports SVG and resolution is more than 105dpi */
-  .pswp--svg .pswp__button/*,
-  .pswp--svg .pswp__button--arrow--left:before,
-  .pswp--svg .pswp__button--arrow--right:before */{
+
+  .pswp--svg .pswp__button{
     background-image: url(default-skin.svg); }
+
+  .pswp--svg .pswp__button--arrow--left:before{
+    background-image: url(up.png); }
+
+  .pswp--svg .pswp__button--arrow--right:before {
+    background-image: url(down.png); }
   .pswp--svg .pswp__button--arrow--left,
   .pswp--svg .pswp__button--arrow--right {
     background: none; } }
@@ -119,41 +137,71 @@ background: url(default-skin.svg) 0 0 no-repeat;
 .pswp--touch .pswp__button--arrow--right {
   visibility: hidden; }
 
+<<<<<<< HEAD
 /*
 	Arrow buttons hit area
 	(icon is added to :before pseudo-element)
 */
 /*.pswp__button--arrow--left,
 .pswp__button--arrow--right {
+=======
+/*EMILY - making up / down arrows as VOGUE
+  Arrow buttons hit area
+  (icon is added to :before pseudo-element)*/
+
+
+.pswp__button--arrow--left{
+>>>>>>> fixclose
   background: none;
-  top: 50%;
-  margin-top: -50px;
+/*  top: 50%;*/
+left:0;
+top:40%;
+/*  margin-top: -50px;*/
   width: 70px;
   height: 100px;
-  position: absolute; }
-
-.pswp__button--arrow--left {
-  left: 0; }
+  position: absolute;
+}
 
 .pswp__button--arrow--right {
-  right: 0; }
+  background: none;
+/*  top: 50%;*/
+left:0;
+bottom:40%;
+/*  margin-top: -50px;
+*/  width: 70px;
+  height: 100px;
+  position: absolute;
+}
+.pswp__button--arrow--left {
+/*  left: 0;*/
+}
+
+.pswp__button--arrow--right {
+/*  right: 0;*/
+}
 
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
   content: '';
   top: 35px;
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 30px;
-  width: 32px;
-  position: absolute; }
+/*  background-color: rgba(0,0,0,0.3);*/
+  background-color: rgba(0,0,0,0);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
 
 .pswp__button--arrow--left:before {
-  left: 6px;
-  background-position: -138px -44px; }
+  /*left: 6px;*/
+/*  background-position: -138px -44px;*/
+}
 
 .pswp__button--arrow--right:before {
-  right: 6px;
-  background-position: -94px -44px; }*/
+
+ /* right: 6px;*/
+/*  background-position: -94px -44px;*/
+}
+
 
 /*
 

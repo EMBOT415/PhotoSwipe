@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Photoswipe Gallery test</title>
+    <title>Photoswipe Gallery test</title>
 <!-- Core CSS file -->
 <link rel="stylesheet" href="./dist/photoswipe.css"> 
 
@@ -93,63 +93,56 @@
 <script>
 var openPhotoSwipe = function() {
 var pswpElement = document.querySelectorAll('.pswp')[0];
-
 // build items array
 var items = [
     {
-        src: 'https://placekitten.com/g/600/400',
-        w: 600,
-        h: 400
+        src: 'https://placekitten.com/g/400/600',
+        w: 400,
+        h: 600
     },
     {
-        src: 'https://fillmurray.com/g/600/400',
-        w: 600,
-        h: 400
+        src: 'https://fillmurray.com/g/400/600',
+        w: 400,
+        h: 600
     },
-   	{
-        src: 'https://lorempixel.com/g/600/400',
-        w: 600,
-        h: 400,
+    {
+        src: 'https://lorempixel.com/g/400/600',
+        w: 400,
+        h: 600,
         title: "lorem pixel image"
     },
     {
-        src: 'https://placekitten.com/g/1200/900',
-        w: 1200,
-        h: 900
+        src: 'https://placekitten.com/g/400/600',
+        w: 400,
+        h: 600
     },
     {
-        src: 'http://fillmurray.com/g/1200/900',
-        w: 1200,
-        h: 900,
+        src: 'http://fillmurray.com/g/400/600',
+        w: 400,
+        h: 600,
         title: "fillmurray placeholder image.  I'm glad i searched for this"
     },
     {
-        src: 'http://lorempixel.com/g/1200/900',
-        w: 1200,
-        h: 900
+        src: 'http://lorempixel.com/g/400/600',
+        w: 400,
+        h: 600
     }
 ];
-
 // define options (if needed)
 var options = {
     // optionName: 'option value'
     index: 0, // start at first slide
         history: false,
         focus: false,
-
         showAnimationDuration: 0,
         hideAnimationDuration: 0,
         closeOnScroll: false,
         closeOnVerticalDrag: false       
 };
-
 // Initializes and opens PhotoSwipe
     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
 };
-
 openPhotoSwipe();
-
 document.getElementById('btn').onclick = openPhotoSwipe;
 </script>
-
